@@ -3,7 +3,9 @@ import { ThreeMainComponent } from "./components";
 const ThreePage = () => {
   return (
     <>
-      <ThreeMainComponent />
+      <div className="h-full">
+        <ThreeMainComponent />
+      </div>
     </>
   );
 };
