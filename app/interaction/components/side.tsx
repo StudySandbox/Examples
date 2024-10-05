@@ -1,15 +1,23 @@
 "use client";
 
-import { TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
+
+import { Button } from "@/components/ui/button";
 
 export const InteractionSidebar = () => {
+  const pathname = usePathname();
+
   return (
-    <TabsList className="flex h-full w-full flex-col gap-5 bg-[#1F2329] p-0">
-      <TabsTrigger
+    <div className="flex h-full w-full flex-col gap-5 bg-[#1F2329] p-0">
+      <Button
         asChild
-        value="1"
-        className="flex w-full cursor-pointer justify-start bg-[#363F48]/40 px-5 data-[state=active]:bg-[#46515C] data-[state=active]:text-white"
+        value="rti-content"
+        className={cn(
+          "flex w-full cursor-pointer justify-start bg-[#363F48]/40 px-5",
+          pathname === "/interaction/rti" && "bg-[#46515C] text-white",
+        )}
       >
         <div className="flex min-h-32 items-center justify-start gap-6 rounded-lg">
           <Image
@@ -27,8 +35,8 @@ export const InteractionSidebar = () => {
             </p>
           </div>
         </div>
-      </TabsTrigger>
-      <TabsTrigger
+      </Button>
+      <Button
         asChild
         value="2"
         className="flex w-full cursor-pointer justify-start bg-[#363F48]/40 px-5 data-[state=active]:bg-[#46515C] data-[state=active]:text-white"
@@ -49,10 +57,10 @@ export const InteractionSidebar = () => {
             </p>
           </div>
         </div>
-      </TabsTrigger>
-      <TabsTrigger
+      </Button>
+      <Button
         asChild
-        value="3"
+        value="geography"
         className="flex w-full cursor-pointer justify-start bg-[#363F48]/40 px-5 data-[state=active]:bg-[#46515C] data-[state=active]:text-white"
       >
         <div className="flex min-h-32 items-center justify-start gap-6 rounded-lg">
@@ -71,10 +79,10 @@ export const InteractionSidebar = () => {
             </p>
           </div>
         </div>
-      </TabsTrigger>
-      <TabsTrigger
+      </Button>
+      <Button
         asChild
-        value="4"
+        value="maps"
         className="flex w-full cursor-pointer justify-start bg-[#363F48]/40 px-5 data-[state=active]:bg-[#46515C] data-[state=active]:text-white"
       >
         <div className="flex min-h-32 items-center justify-start gap-3 rounded-lg">
@@ -93,8 +101,8 @@ export const InteractionSidebar = () => {
             </p>
           </div>
         </div>
-      </TabsTrigger>
-      <TabsTrigger
+      </Button>
+      <Button
         asChild
         value="5"
         className="flex w-full cursor-pointer justify-start bg-[#363F48]/40 px-6 data-[state=active]:bg-[#46515C] data-[state=active]:text-white"
@@ -115,8 +123,8 @@ export const InteractionSidebar = () => {
             </p>
           </div>
         </div>
-      </TabsTrigger>
-      <TabsTrigger
+      </Button>
+      <Button
         asChild
         value="6"
         className="flex w-full cursor-pointer justify-start bg-[#363F48]/40 px-6 data-[state=active]:bg-[#46515C] data-[state=active]:text-white"
@@ -137,8 +145,8 @@ export const InteractionSidebar = () => {
             </p>
           </div>
         </div>
-      </TabsTrigger>
-      <TabsTrigger
+      </Button>
+      <Button
         asChild
         value="7"
         className="flex w-full cursor-pointer justify-start bg-[#363F48]/40 px-5 data-[state=active]:bg-[#46515C] data-[state=active]:text-white"
@@ -159,8 +167,8 @@ export const InteractionSidebar = () => {
             </p>
           </div>
         </div>
-      </TabsTrigger>
-      <TabsTrigger
+      </Button>
+      <Button
         asChild
         value="8"
         className="flex w-full cursor-pointer justify-start bg-[#363F48]/40 px-6 data-[state=active]:bg-[#46515C] data-[state=active]:text-white"
@@ -181,7 +189,7 @@ export const InteractionSidebar = () => {
             </p>
           </div>
         </div>
-      </TabsTrigger>
-    </TabsList>
+      </Button>
+    </div>
   );
 };

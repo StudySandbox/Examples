@@ -1,4 +1,18 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = { transpilePackages: ["three"] };
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+      {
+        protocol: "http",
+        hostname: "**",
+      },
+    ],
+  },
+  transpilePackages: ["three"],
+};
 
 export default nextConfig;

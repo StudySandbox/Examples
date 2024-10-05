@@ -1,10 +1,10 @@
+// 빛으로 보는 백악기 초식 공룡알
+
 "use client";
 
-import { TabsContent } from "@/components/ui/tabs";
-
-export const Contents = () => {
+export const RTIContents = () => {
   return (
-    <TabsContent value="1">
+    <div className="bg-slate-200">
       <div> Tab 1 ScrollTest</div>
       <div> Tab 1 ScrollTest</div>
       <div> Tab 1 ScrollTest</div>
@@ -55,6 +55,6 @@ export const Contents = () => {
       <div> Tab 1 ScrollTest</div>
       <div> Tab 1 ScrollTest</div>
       <div> Tab 1 ScrollTest</div>
-    </TabsContent>
+    </div>
   );
 };
